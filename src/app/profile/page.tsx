@@ -1,5 +1,9 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'code with Tomasz',
+};
+
 export default function Profile() {
   return (
     <div>
