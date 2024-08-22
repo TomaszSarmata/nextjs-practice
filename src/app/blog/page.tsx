@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div>
+      <Link href="/">Home</Link>
       <h1>Blog Post 1</h1>
       <h1>Blog Post 2</h1>
       <h1>Blog Post 3</h1>
