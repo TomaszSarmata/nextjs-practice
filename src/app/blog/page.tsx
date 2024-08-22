@@ -2,7 +2,9 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'BlogList',
+  title: {
+    absolute: 'This is the absolute title',
+  },
 };
 
 export default function BlogPage() {
