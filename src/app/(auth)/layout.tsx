@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,20 +19,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
   return (
-    <html lang="en">
-      <body>
-        {children}
-        {navlinks.map((link) => {
-          return (
-            <Link
-              href={link.href}
-              key={link.href}>
-              {link.name}
-            </Link>
-          );
-        })}
-      </body>
-    </html>
+    <>
+      {children}
+      {navlinks.map((link) => {
+        const isActive = pathname.startsWith(link.href);
+        return (
+          <Link
+            href={link.href}
+            key={link.href}
+            className={
+              isActive
+                ? 'text-yellow-400 font-serif font-bold'
+                : 'text-blue-400'
+            }>
+            {link.name}
+          </Link>
+        );
+      })}
+    </>
   );
 }
