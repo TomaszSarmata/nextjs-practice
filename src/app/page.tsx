@@ -4,8 +4,8 @@ import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Main Part of the App</h1>
+    <div className="h-screen">
+      <h1 className="text-4xl">Main Part of the App</h1>
     </div>
   );
 }
